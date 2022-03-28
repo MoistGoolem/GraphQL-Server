@@ -13,13 +13,41 @@ const users = [
         id: 1,
         name: 'Brian',
         age: '21',
-        shark: 'Great White Shark'
+        shark: 'Great White Shark',
+        friends: [
+            {
+                id: 2,
+                name: 'Kim',
+                age: '22',
+                shark: 'Whale Shark'
+            },
+            {
+                id: 4,
+                name: 'Joseph',
+                age: '23',
+                shark: 'Tiger Shark'
+            },
+            {
+                id: 5,
+                name: 'Joy',
+                age: '25',
+                shark: 'Hammerhead Shark'
+            }
+        ]
     },
     {
         id: 2,
         name: 'Kim',
         age: '22',
-        shark: 'Whale Shark'
+        shark: 'Whale Shark',
+        friends: [
+            {
+                id: 1,
+                name: 'Brian',
+                age: '21',
+                shark: 'Great White Shark',
+            }
+        ]
     },
     {
         id: 3,
@@ -31,13 +59,29 @@ const users = [
         id: 4,
         name: 'Joseph',
         age: '23',
-        shark: 'Tiger Shark'
+        shark: 'Tiger Shark',
+        friends: [
+            {
+                id: 1,
+                name: 'Brian',
+                age: '21',
+                shark: 'Great White Shark',
+            }
+        ]
     },
     {
         id: 5,
         name: 'Joy',
         age: '25',
-        shark: 'Hammerhead Shark'
+        shark: 'Hammerhead Shark',
+        friends: [
+            {
+                id: 1,
+                name: 'Brian',
+                age: '21',
+                shark: 'Great White Shark',
+            }
+        ]
     }
 ];
   
@@ -47,7 +91,7 @@ const getUser = function(args) {
     return users.filter(user => user.id == userID)[0];
 }
 
-  // Return a list of users
+// Return a list of users
 const retrieveUsers = function(args) {
     if (args.shark) {
         const shark = args.shark;

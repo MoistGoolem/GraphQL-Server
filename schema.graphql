@@ -9,6 +9,7 @@ type Person {
     name: String
     age: Int
     shark: String
+    friends: [Person]
 }
 
 type Mutation {
